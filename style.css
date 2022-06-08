@@ -56,23 +56,56 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-section {
+#section {
   display: grid;
   gap: 2rem;
   text-align: center;
-}
-
-section #input input {
-  margin-right: 4rem;
+  margin-top: 5rem;
 }
 
 img {
   max-width: 8rem;
 }
 
+#text {
+  display: grid;
+  gap: 1rem;
+}
+
+#input {
+  display: grid;
+  gap: 1.5rem;
+  padding: 0 2rem;
+  width: 100%;
+}
+
 input {
   height: 2rem;
   border-radius: 0.25rem;
+}
+
+@media (min-width: 600px) {
+  #input {
+    padding: 0 6rem;
+  }
+}
+
+@media (min-width: 800px) {
+  #input {
+    padding: 0 8rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  #input {
+    padding: 0 10rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  #input {
+    padding: 0 12rem;
+  }
 }
 
 button {
@@ -81,12 +114,13 @@ button {
   height: 2rem;
   display: inline-flex;
   align-items: center;
+  place-content: center;
   padding: 0 1.5rem;
   border-radius: 0.25rem;
   font: 500 1rem var(--body-font);
   transition: background 0.3s;     /* quando bota o mouse em cima  */
 }
 
-button:hover {  /* Para quando o mouse passar em cima  */
+button:hover { 
   background: var(--base-color-alt);
 }
